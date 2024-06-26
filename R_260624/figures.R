@@ -61,7 +61,7 @@ map_leaflet_airport(pax_apt_all,airports_location,"2","2020")
 
 map_leaflet_airport <- function(df, airports_location, months, years){
   
-  palette <- c("green", "blue", "red")
+  palette <- c("orange","green", "blue", "red")
  
   trafic_aeroports <- df %>%
     mutate(trafic = apt_pax_dep + apt_pax_tr + apt_pax_arr) %>%
@@ -76,7 +76,7 @@ map_leaflet_airport <- function(df, airports_location, months, years){
   
   trafic_aeroports <- trafic_aeroports %>%
     mutate(
-      volume = ntile(trafic, 3)
+      volume = ntile(trafic, 4)
     ) %>%
     mutate(
       color = palette[volume]
@@ -99,6 +99,8 @@ map_leaflet_airport <- function(df, airports_location, months, years){
 }
 
 map_leaflet_airport(pax_apt_all,airports_location,"1","2018")
+
+
 
 df<-pax_apt_all
 months="1"
