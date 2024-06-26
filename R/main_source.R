@@ -49,3 +49,4 @@ leaflet(airport_location) %>%
 
 #
 figure<-plot_airport_line(aeroport,"FMEE")
+figure

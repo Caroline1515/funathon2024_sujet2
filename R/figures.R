@@ -24,4 +24,4 @@ plot_airport_line<-function(df,apt){
   return(fig)
 }
 
-plot_airport_line(aeroport,"FMEE")
+#plot_airport_line(aeroport,"FMEE")
